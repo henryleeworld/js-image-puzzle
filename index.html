@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta property="og:title" content="圖片拼圖" />
+	<meta property="og:description" content="拼圖是一種解決平面空間填充和排列難題的遊戲，要求將局部圖案的扁平零片進行拼組，把全部零片拼接起來構成完整的圖案。" />
+	<meta property="og:locale" content="zh_TW" />
+	<meta property="og:type" content="website" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/image-puzzle.css" rel="stylesheet" />
+    <title>圖片拼圖</title>
+</head>
+
+<body>
+    <div id="collage">
+        <div id="playPanel" style="padding:5px;display:none;">
+            <div style="display:inline-block; margin:auto; width:95%; vertical-align:top;">
+                <ul id="sortable" class="sortable"></ul>
+                <div id="actualImageBox">
+                    <div id="stepBox">
+                        <div>步數：</div>
+                        <div id="stepCount" class="stepCount">0</div>
+                    </div>
+                    <div id="timeBox">
+                        花費時間：<span id="timerPanel"></span> 秒
+                    </div>
+                    <img id="actualImage" />
+                    <div>重新排列組合成這個圖片。</div>
+                    <p id="levelPanel">
+                        <input type="radio" name="level" id="easy" checked="checked" value="3" onchange="imagePuzzle.startGame(images, this.value);"/>
+                        <label for="easy">簡單</label>
+                        <input type="radio" name="level" id="medium" value="4" onchange="imagePuzzle.startGame(images, this.value);" />
+                        <label for="medium">中等</label>
+                        <input type="radio" name="level" id="hard" value="5" onchange="imagePuzzle.startGame(images, this.value);" />
+                        <label for="hard">困難</label>
+                    </p>
+                    <div>
+                        <button id="btnRule" type="button" class="btn" onclick="rules();">規則</button>
+                        <button id="newPhoto" type="button" class="btn" onclick="restart();">換圖片</button>
+                        <button id="btnReplay" type="button" class="btn" onclick="about();">關於</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="gameOver" style="display:none;">
+            <div style="background-color: #fc9e9e; padding: 5px 10px 20px 10px; text-align: center; ">
+                <h2 style="text-align:center">遊戲結束！！</h2>
+                恭喜！！<br />您已經完成了這張圖片。
+                <br />步數：<span id="stepCount" class="stepCount">0</span> 步。
+                <br />花費時間：<span class="timeCount">0</span> 秒<br />
+                <div>
+                    <button type="button" onclick="window.location.reload(true);">再玩一次</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script src="js/image-config.js"></script>
+	<script src="js/image-puzzle.js"></script>
+</body>
+</html>
