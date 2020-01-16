@@ -1,9 +1,9 @@
 ﻿var images = [
-    { src: 'img/taipei-101.jpg', title: '台北101' },
-    { src: 'img/national-palace-museum.jpg', title: '國立故宮博物院' },
-    { src: 'img/longshan-temple.jpg', title: '龍山寺' },
-    { src: 'img/grand-hotel.jpg', title: '圓山大飯店' },
-    { src: 'img/chiang-kai-shek-memorial-hall.jpg', title: '中正紀念堂' }
+    { src: 'images/taipei-101.jpg', title: '台北101' },
+    { src: 'images/national-palace-museum.jpg', title: '國立故宮博物院' },
+    { src: 'images/longshan-temple.jpg', title: '龍山寺' },
+    { src: 'images/grand-hotel.jpg', title: '圓山大飯店' },
+    { src: 'images/chiang-kai-shek-memorial-hall.jpg', title: '中正紀念堂' }
 ];
 
 window.onload = function () {
